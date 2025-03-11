@@ -89,7 +89,7 @@ class Speech:
                         return module_time.time_func()
                     elif fuzz.ratio('дату' == clearedLine) >= 75:
                         return module_time.data_func()
-                    elif fuzz.ratio('запусти' == clearedLine) >= 75:
+                    elif fuzz.ratio('запустизапусти' == clearedLine) >= 75:
                         del_word = self.del_command_word(json.loads(value)['text'], self.path_for_json_files)
                         return start_app.func_cycle(del_word)
                     elif fuzz.ratio('анекдот' == clearedLine) >= 75:
